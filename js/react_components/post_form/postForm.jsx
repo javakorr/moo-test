@@ -31,7 +31,8 @@ module.exports = React.createClass({
         return (
             <div className="row">
                 <div className="large-9 large-offset-1 columns">
-                    <input type="text" placeholder="Enter your message here..." value={this.state.text} onChange={this.handleInputChange} />
+                    <input type="text" placeholder="Enter your message here..." value={this.state.text}
+                           onChange={this.handleInputChange} />
                 </div>
                 <div className="large-1 columns end">
                     <button className="button" onClick={this.submitNewPost}>Post</button>

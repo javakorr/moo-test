@@ -1,0 +1,6 @@
+<div class="row ng-class: { 'text-center': !posts.length }">
+    <div ng-if="!posts.length">No posts yet. Post the first one!</div>
+    <div ng-if="posts.length" class="large-10 large-offset-1 end" ng-repeat="post in posts track by post.id">
+        {{ post.date }} | {{ post.text }}
+    </div>
+</div>

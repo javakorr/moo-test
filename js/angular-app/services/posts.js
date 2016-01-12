@@ -10,7 +10,7 @@ module.exports = function() {
 
     function addNewPost(post) {
         posts.push(post);
-        store.set('posts', posts)
+        store.set('posts', posts);
     }
 
     return {

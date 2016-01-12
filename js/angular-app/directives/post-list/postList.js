@@ -3,7 +3,9 @@ module.exports = function(posts) {
         restrict: 'C',
         templateUrl: './js/angular-app/partials/post-list/postList.html',
         link: function(scope) {
-            scope.posts = posts.getPosts();
+            posts.getPosts().then(function(receivedPosts) {
+                scope.posts = receivedPosts;
+            });
         }
     };
 };

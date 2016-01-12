@@ -21,8 +21,9 @@ module.exports = function(posts) {
                 var newPostDate = moment().format('MMM Do YYYY, h:mm:ssa'),
                     newPost = { id: generateId(scope.posts), text: newPostText, date: newPostDate };
 
-                posts.addNewPost(newPost);
-                scope.newPost.text = null;
+                posts.addNewPost(newPost).then(function() {
+                    scope.newPost.text = null;
+                });
             };
 
             function generateId(items) {

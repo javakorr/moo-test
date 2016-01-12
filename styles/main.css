@@ -1,0 +1,19 @@
+.post-form {
+    margin-top: 1rem;
+}
+
+.post {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.post:last-child:not(:first-child) {
+    float: none;
+}
+
+.post-date {
+    font-style: italic;
+}
+
+.post-text {
+    font-size: 2rem;
+}

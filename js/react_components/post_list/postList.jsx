@@ -27,7 +27,7 @@ module.exports = React.createClass({
 
         if (!this.state.posts.length) {
             return (
-                <div className="row text-center">No posts yet. Post the first one!</div>
+                <div className="row text-center post">No posts yet. Submit your first post!</div>
             );
         }
 

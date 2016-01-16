@@ -1,5 +1,6 @@
 var React = require('react'),
-    moment = require('moment');
+    moment = require('moment'),
+    PostActionCreators = require('../../actions/postActionCreators');
 
 module.exports = React.createClass({
     getInitialState: function() {
@@ -19,11 +20,11 @@ module.exports = React.createClass({
         }
 
         var newPostDate = moment().format('MMM Do YYYY, h:mm:ssa'),
-            newPost = { text: newPostText, date: newPostDate },
-            newPostEvent = new CustomEvent('submitPost', { detail: newPost, bubbles: false });
+            newPost = { text: newPostText, date: newPostDate };
 
-        // TODO: find another way to communicate between independent components (try FLUX?)
-        document.dispatchEvent(newPostEvent);
+        PostActionCreators.createPost({
+            post: newPost
+        });
 
         this.setState({ text: '' });
     },

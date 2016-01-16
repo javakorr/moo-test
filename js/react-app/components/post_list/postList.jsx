@@ -22,9 +22,9 @@ module.exports = React.createClass({
             );
         }
 
-        var posts = this.state.posts.map(function(postItem) {
+        var posts = this.state.posts.map(function(post) {
             return (
-                <Post post={postItem.post} key={postItem.post.id} />
+                <Post post={post} key={post.id} />
             );
         });
 

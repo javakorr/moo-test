@@ -27,8 +27,8 @@ AppDispatcher.register(function(action) {
         case 'CREATE_POST':
             var newPost = action.post;
 
-            newPost.post.id = generateId(posts);
-            posts.push(action.post);
+            newPost.id = generateId(posts);
+            posts.push(newPost);
             store.set('posts', posts);
             PostStore.emitChange();
             break;
@@ -38,7 +38,7 @@ AppDispatcher.register(function(action) {
 });
 
 function generateId(items) {
-    return items.length && _.max(items, 'post.id').post.id + 1;
+    return items.length && _.max(items, 'id').id + 1;
 }
 
 module.exports = PostStore;

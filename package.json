@@ -7,8 +7,8 @@
     "url": "https://github.com/javakorr/moo-test.git"
   },
   "scripts": {
-    "start": "browserify -t [ babelify --presets [ react ] ] app.jsx -o bundle.js && gulp",
-    "start:angular": "browserify app.js -o bundle.js && gulp"
+    "start": "browserify -t [ babelify --presets [ react ] ] ./js/react-app/app.jsx -o ./js/bundle.js && gulp",
+    "start:angular": "browserify ./js/angular-app/app.js -o ./js/bundle.js && gulp"
   },
   "dependencies": {
     "angular": "^1.4.8",

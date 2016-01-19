@@ -1,4 +1,4 @@
-var React = require('react'),
+const React = require('react'),
     Post = require('./post.jsx'),
     PostStore = require('../../stores/postStore');
 
@@ -22,7 +22,7 @@ module.exports = React.createClass({
             );
         }
 
-        var posts = this.state.posts.map(function(post) {
+        const posts = this.state.posts.map(function(post) {
             return (
                 <Post post={post} key={post.id} />
             );

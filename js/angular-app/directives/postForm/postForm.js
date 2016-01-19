@@ -6,7 +6,7 @@ var ENTER_KEY_CODE = 13;
 module.exports = function(posts) {
     return {
         restrict: 'C',
-        templateUrl: '../js/angular-app/partials/post-form/postForm.html',
+        templateUrl: '../js/angular-app/partials/postForm/postForm.html',
         link: function(scope) {
             scope.newPost = {
                 text: ''

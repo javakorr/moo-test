@@ -1,8 +1,8 @@
-var AppDispatcher = require('../dispatcher/appDispatcher');
+const AppDispatcher = require('../dispatcher/appDispatcher');
 
 module.exports = {
     createPost: function(newPost) {
-        var action = {
+        const action = {
             actionType: 'CREATE_POST',
             post: newPost.post
         };

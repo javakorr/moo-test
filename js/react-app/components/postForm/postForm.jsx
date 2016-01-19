@@ -1,8 +1,8 @@
-var React = require('react'),
+const React = require('react'),
     moment = require('moment'),
     PostActionCreators = require('../../actions/postActionCreators');
 
-var ENTER_KEY_CODE = 13;
+const ENTER_KEY_CODE = 13;
 
 module.exports = React.createClass({
     getInitialState: function() {
@@ -16,14 +16,14 @@ module.exports = React.createClass({
             return false;
         }
 
-        var newPostText = this.state.text.trim();
+        const newPostText = this.state.text.trim();
 
         if (!newPostText.length) {
             this.setState({ text: '' });
-            return;
+            return false;
         }
 
-        var newPostDate = moment().format('MMM Do YYYY, h:mm:ssa'),
+        const newPostDate = moment().format('MMM Do YYYY, h:mm:ssa'),
             newPost = { text: newPostText, date: newPostDate };
 
         PostActionCreators.createPost({

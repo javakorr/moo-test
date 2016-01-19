@@ -1,13 +1,13 @@
-var AppDispatcher = require('../dispatcher/appDispatcher'),
+const AppDispatcher = require('../dispatcher/appDispatcher'),
     EventEmitter = require('events').EventEmitter,
     assign = require('object-assign'),
     _ = require('lodash'),
     store = require('store'),
     initialPosts = store.get('posts') || [];
 
-var posts = initialPosts;
+const posts = initialPosts;
 
-var PostStore = assign({}, EventEmitter.prototype, {
+const PostStore = assign({}, EventEmitter.prototype, {
     emitChange: function() {
         this.emit('change');
     },
@@ -25,7 +25,7 @@ var PostStore = assign({}, EventEmitter.prototype, {
 AppDispatcher.register(function(action) {
     switch (action.actionType) {
         case 'CREATE_POST':
-            var newPost = action.post;
+            const newPost = action.post;
 
             newPost.id = generateId(posts);
             posts.push(newPost);

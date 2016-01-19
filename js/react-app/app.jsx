@@ -1,7 +1,7 @@
-var React = require('react'),
+const React = require('react'),
     ReactDOM = require('react-dom'),
-    PostsList = require('./components/post_list/postList.jsx'),
-    PostForm = require('./components/post_form/postForm.jsx');
+    PostsList = require('./components/postList/postList.jsx'),
+    PostForm = require('./components/postForm/postForm.jsx');
 
 ReactDOM.render(
     <PostsList />,
